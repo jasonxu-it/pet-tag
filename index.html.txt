@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>帮我回家 - 狗狗信息卡</title>
+    <style>
+        :root {
+            --primary-color: #FF9A9E; /* 主色调：粉色，可修改 */
+            --bg-color: #FECFEF;
+            --text-color: #333;
+        }
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: var(--text-color);
+        }
+        .card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 350px;
+            overflow: hidden;
+            text-align: center;
+            position: relative;
+        }
+        .header {
+            background-color: var(--primary-color);
+            padding: 30px 20px;
+            color: white;
+        }
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid white;
+            object-fit: cover;
+            background-color: #fff;
+            margin-bottom: 10px;
+        }
+        h1 {
+            margin: 10px 0 5px;
+            font-size: 24px;
+        }
+        .breed {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        .content {
+            padding: 25px;
+        }
+        .info-item {
+            margin-bottom: 20px;
+            text-align: left;
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 10px;
+        }
+        .info-label {
+            font-size: 12px;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+        .info-value {
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 1.4;
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            margin-top: 10px;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 18px;
+            transition: transform 0.2s;
+            box-sizing: border-box;
+        }
+        .btn:active {
+            transform: scale(0.98);
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #aaa;
+        }
+        /* 紧急警示样式 */
+        .alert {
+            background-color: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeeba;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="header">
+            <!-- 这里替换狗狗的照片链接 -->
+            <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="狗狗照片" class="avatar">
+            <h1>豆豆 (DouDou)</h1>
+            <div class="breed">柯基犬 | 3岁</div>
+        </div>
+
+        <div class="content">
+            <div class="info-item">
+                <div class="info-label">👤 主人称呼</div>
+                <div class="info-value">王先生</div>
+            </div>
+
+            <div class="info-item">
+                <div class="info-label">📞 联系电话</div>
+                <div class="info-value">138-xxxx-xxxx</div>
+            </div>
+
+            <div class="info-item alert">
+                <div class="info-label">⚠️ 特别备注</div>
+                <div class="info-value">我有心脏病，请不要剧烈追赶我。我很乖，不会咬人。</div>
+            </div>
+
+            <div class="info-item">
+                <div class="info-label">🏥 疫苗情况</div>
+                <div class="info-value">已接种狂犬疫苗 (有效期至 2026.12)</div>
+            </div>
+
+            <!-- 点击直接拨打电话 -->
+            <a href="tel:13800000000" class="btn">📞 立即拨打主人电话</a>
+            
+            <!-- 如果需要加微信，可以把上面那行换成下面这个，并填入你的微信号 -->
+            <!-- <a href="weixin://" class="btn" style="background-color:#07c160">💬 添加主人微信</a> -->
+
+            <div class="footer">
+                如果不小心走丢，请好心人帮忙联系主人<br>
+                必有重谢！🦴
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
